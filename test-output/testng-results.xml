@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="100480" started-at="2017-02-22T15:03:39Z" finished-at="2017-02-22T15:05:20Z">
+    <groups>
+    </groups>
+    <test name="test1" duration-ms="100480" started-at="2017-02-22T15:03:39Z" finished-at="2017-02-22T15:05:20Z">
+      <class name="demoTest.TestPage">
+        <test-method status="PASS" signature="websetup()[pri:0, instance:demoTest.TestPage@29ee9faa]" name="websetup" is-config="true" duration-ms="17" started-at="2017-02-22T20:33:39Z" finished-at="2017-02-22T20:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- websetup -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:demoTest.TestPage@29ee9faa]" name="testLogin" duration-ms="17640" started-at="2017-02-22T20:33:39Z" finished-at="2017-02-22T20:33:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="testUsingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:demoTest.TestPage@29ee9faa]" name="testUsingDataProvider" duration-ms="14271" started-at="2017-02-22T20:33:57Z" data-provider="DirectAuthentication" finished-at="2017-02-22T20:34:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abhishek.verma02@snapdeal.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jan@2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUsingDataProvider -->
+        <test-method status="PASS" signature="testUsingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:demoTest.TestPage@29ee9faa]" name="testUsingDataProvider" duration-ms="14458" started-at="2017-02-22T20:34:11Z" data-provider="DirectAuthentication" finished-at="2017-02-22T20:34:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@snapdeal.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUsingDataProvider -->
+        <test-method status="PASS" signature="testUsingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:demoTest.TestPage@29ee9faa]" name="testUsingDataProvider" duration-ms="14572" started-at="2017-02-22T20:34:26Z" data-provider="DirectAuthentication" finished-at="2017-02-22T20:34:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abhishek.verma07@snapdeal.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jan@2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUsingDataProvider -->
+        <test-method status="PASS" signature="testUsingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:demoTest.TestPage@29ee9faa]" name="testUsingDataProvider" duration-ms="13350" started-at="2017-02-22T20:34:40Z" data-provider="DirectAuthentication" finished-at="2017-02-22T20:34:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abhishek.verma04@snapdeal.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jan@2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUsingDataProvider -->
+        <test-method status="PASS" signature="testUsingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:demoTest.TestPage@29ee9faa]" name="testUsingDataProvider" duration-ms="13797" started-at="2017-02-22T20:34:53Z" data-provider="DirectAuthentication" finished-at="2017-02-22T20:35:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abhishek.verma03@snapdeal.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jan@2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUsingDataProvider -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:demoTest.TestPage@29ee9faa]" name="teardown" is-config="true" duration-ms="12319" started-at="2017-02-22T20:35:07Z" finished-at="2017-02-22T20:35:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- demoTest.TestPage -->
+    </test> <!-- test1 -->
+  </suite> <!-- Suite1 -->
+</testng-results>
