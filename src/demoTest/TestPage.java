@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -88,6 +89,7 @@ public class TestPage {
 	
 	
 	@Test(enabled=false)
+			
 	public void testLogin()	{
 		driver = new FirefoxDriver();
 		driver.get("http://10.41.57.131:8080/PriceSimulator/login.action");
@@ -97,6 +99,7 @@ public class TestPage {
 		driver.findElement(By.name("password")).sendKeys("Jan@2017");
 		WebElement ele=driver.findElement(By.id("submitbutton"));
 		ele.click();
+		Assert.assertTrue(false);
 		driver.close();
 	}
 	
@@ -114,7 +117,7 @@ public class TestPage {
 	}
 	
 	
-	@Test(enabled=true, dataProvider="Authentication")
+	@Test(enabled=false, dataProvider="Authentication")
 	public void testUsingDataProviderExcel(String username,String password){
 		driver = new FirefoxDriver();
 		driver.get("http://10.41.57.131:8080/PriceSimulator/login.action");
@@ -123,8 +126,31 @@ public class TestPage {
 		driver.findElement(By.name("email")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		WebElement ele=driver.findElement(By.id("submitbutton"));
+		
 		ele.click();
 	}
+	@Test(enabled=true, priority=2)
+	public void testPass(){
+		System.out.println("3");
+		Assert.assertTrue(true);
+	}
+	@Test(enabled=true, priority=1)
+	public void testfail(){
+		System.out.println("2");
+		Assert.assertTrue(false);
+	}
+	@Test(enabled=true, dependsOnMethods={"testPass"})
+	public void testfailbutdependsonPass(){
+		System.out.println("no");
+		Assert.assertTrue(false);
+	}
+	@Test(enabled=true,priority=0, dependsOnMethods={"testfail"})
+	public void testpassbutdependsonFail(){
+		System.out.println("1");
+		Assert.assertTrue(true);
+	}
+	
+	
 	
 	@Test(enabled=false)
 	public void testCal() throws Exception {
@@ -150,8 +176,7 @@ public class TestPage {
 	
 	@AfterClass
 	public void teardown(){
-		//close the app
-		driver.quit();
+	
 	}
 	
 	

@@ -52,7 +52,7 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		
 		<dependency>
    		 <groupId>org.apache.poi</groupId>
    		 <artifactId>poi-ooxml</artifactId>
@@ -60,6 +60,26 @@
 		</dependency>
 		
 		
+<!--Database library   -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+			<dependency>
+   			 <groupId>mysql</groupId>
+  			 <artifactId>mysql-connector-java</artifactId>
+  			 <version>5.1.6</version>
+			</dependency>
+		
+		
+		 <dependency>
+  		  <groupId>com.aerospike</groupId>
+  		  <artifactId>aerospike-client</artifactId>
+ 		  <version>3.2.2</version>
+ 		 </dependency>
+		
+	<!-- <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.0.1</version>
+    </dependency> 	 -->
 		
    </dependencies>
   </project>
