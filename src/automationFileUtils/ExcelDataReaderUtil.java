@@ -1,4 +1,4 @@
-package automationUtils;
+package automationFileUtils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelDataReader {
+public class ExcelDataReaderUtil {
 	private static XSSFSheet ExcelWSheet;
 
 	private static XSSFWorkbook ExcelWBook;

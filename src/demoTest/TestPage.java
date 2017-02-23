@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import automationUtils.ExcelDataReader;
+import automationFileUtils.ExcelDataReaderUtil;
 
 public class TestPage {
 	
@@ -78,7 +78,7 @@ public class TestPage {
 	 
 	public Object[][] Authentication() throws Exception{
 		 
-        Object[][] testObjArray = ExcelDataReader	.getTableArray("D://ToolsQA//OnlineStore//src//testData//TestData.xlsx","Sheet1");
+        Object[][] testObjArray = ExcelDataReaderUtil	.getTableArray("C:\\Users\\abhishek.verma02\\workspace\\GlobalAutomationFWK\\TestDataFile\\sheet1.xlsx","Sheet1");
 
         return (testObjArray);
 
@@ -87,7 +87,7 @@ public class TestPage {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void testLogin()	{
 		driver = new FirefoxDriver();
 		driver.get("http://10.41.57.131:8080/PriceSimulator/login.action");
@@ -100,7 +100,7 @@ public class TestPage {
 		driver.close();
 	}
 	
-	@Test(enabled=true, dataProvider="DirectAuthentication")
+	@Test(enabled=false, dataProvider="DirectAuthentication")
 	public void testUsingDataProvider(String username,String password){
 		driver = new FirefoxDriver();
 		driver.get("http://10.41.57.131:8080/PriceSimulator/login.action");
@@ -114,8 +114,12 @@ public class TestPage {
 	}
 	
 	
-	@Test(enabled=false, dataProvider="Authentication")
+	@Test(enabled=true, dataProvider="Authentication")
 	public void testUsingDataProviderExcel(String username,String password){
+		driver = new FirefoxDriver();
+		driver.get("http://10.41.57.131:8080/PriceSimulator/login.action");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.name("email")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		WebElement ele=driver.findElement(By.id("submitbutton"));
