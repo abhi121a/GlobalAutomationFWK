@@ -20,7 +20,7 @@ public class MySqlDBUtils {
 		   static final String USER = "root";
 		   static final String PASS = "root";
 		   
-	public MySqlDBUtils() throws IOException{
+	 MySqlDBUtils() throws IOException{
 			    
 			   prop = new Properties();
 		        prop.load(MySqlDBUtils.class.getResourceAsStream(COMMON_PROP_LOCATION));
